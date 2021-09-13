@@ -21,11 +21,13 @@ function Notes() {
 
   return (
     <div className="container">
-      <h1>Notes</h1>
-      {notes.map((note) => (
-        <div key={note._id}>
-          <h3>{note.title}</h3>
-          <p>{note.content} </p>
+      <h1 className="mt-3 mb-3">Notes</h1>
+      {notes.map((note, index) => (
+        <div className="card mb-3" key={index}>
+          <div className="card-body">
+            <h3 className="card-title">{note.title}</h3>
+            <p className="card-text">{note.content} </p>
+          </div>
         </div>
       ))}
     </div>
